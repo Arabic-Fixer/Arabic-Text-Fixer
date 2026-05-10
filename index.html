@@ -68,7 +68,7 @@
     .sec-sub{font-size:clamp(13px,1.6vw,16px);font-weight:300;color:var(--text-dim);margin-bottom:56px;max-width:640px}
 
     /* TUTORIAL STEPS */
-    .tut-step{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;margin-bottom:96px}
+    .tut-step{display:grid;grid-template-columns:1fr 1.15fr;gap:64px;align-items:center;margin-bottom:104px}
     .tut-step:last-child{margin-bottom:0}
     .tut-step.flip{direction:rtl}
     .tut-step.flip>*{direction:ltr}
@@ -81,15 +81,15 @@
     .tut-step-item{display:flex;align-items:flex-start;gap:12px;font-size:13px;color:var(--text-dim)}
     .tut-step-num{width:22px;height:22px;background:var(--accent-dim);border:1px solid rgba(91,106,245,.3);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:var(--accent);flex-shrink:0;margin-top:1px}
     .tut-step-item b{color:var(--text);font-weight:500}
-    .tut-img-wrap{position:relative}
-    .tut-img-wrap img{width:100%;border-radius:14px;border:1px solid var(--border);box-shadow:0 20px 60px rgba(0,0,0,.5);display:block}
-    .tut-img-wrap::before{content:'';position:absolute;inset:-1px;border-radius:15px;background:linear-gradient(135deg,rgba(91,106,245,.15),transparent 60%);pointer-events:none;z-index:1}
-    .tut-tag{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--accent);border-radius:99px;padding:4px 14px;font-size:11px;font-family:var(--mono);font-weight:500;color:#fff;white-space:nowrap;box-shadow:0 4px 14px var(--accent-glow);z-index:2}
+    .tut-img-wrap{position:relative;padding:16px;background:var(--bg2);border:1px solid var(--border);border-radius:18px;box-shadow:0 24px 80px rgba(0,0,0,.6)}
+    .tut-img-wrap img{width:100%;border-radius:10px;border:1px solid rgba(91,106,245,.25);box-shadow:0 8px 32px rgba(0,0,0,.5);display:block;filter:brightness(1.08) contrast(1.05)}
+    .tut-img-wrap::before{content:'';position:absolute;inset:0;border-radius:18px;background:linear-gradient(135deg,rgba(91,106,245,.08),transparent 50%);pointer-events:none;z-index:1}
+    .tut-tag{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--accent);border-radius:99px;padding:5px 16px;font-size:11px;font-family:var(--mono);font-weight:500;color:#fff;white-space:nowrap;box-shadow:0 4px 18px var(--accent-glow);z-index:2;letter-spacing:.04em}
 
     /* SCREENSHOTS GALLERY (before/after + word paste) */
     .gallery-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
-    .gallery-img{position:relative}
-    .gallery-img img{width:100%;border-radius:12px;border:1px solid var(--border);box-shadow:0 16px 48px rgba(0,0,0,.45);display:block}
+    .gallery-img{position:relative;padding:14px;background:#1e2235;border:1px solid var(--border);border-radius:16px}
+    .gallery-img img{width:100%;border-radius:12px;border:1px solid rgba(91,106,245,.25);box-shadow:0 16px 48px rgba(0,0,0,.45);display:block;filter:brightness(1.1) contrast(1.05)}
     .gallery-label{position:absolute;top:12px;left:12px;background:rgba(15,17,23,.85);backdrop-filter:blur(6px);border:1px solid var(--border);border-radius:99px;padding:4px 12px;font-size:11px;font-family:var(--mono);color:var(--text-dim)}
 
     /* FEATURES */
