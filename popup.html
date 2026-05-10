@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arabic Fixer</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="container">
+
+    <header class="header">
+      <div class="logo">
+        <span class="logo-icon">
+          <!-- ص = "correct" in Arabic — replaces the old ع placeholder -->
+          <svg width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="30" height="30" rx="8" fill="#5b6af5"/>
+            <text x="15" y="22"
+              font-family="Tahoma, 'Segoe UI', Arial, serif"
+              font-size="17"
+              font-weight="700"
+              fill="#ffffff"
+              text-anchor="middle"
+              direction="rtl">ص</text>
+          </svg>
+        </span>
+        <span class="logo-text">Arabic Fixer</span>
+      </div>
+    </header>
+
+    <div class="mode-row">
+      <label class="mode-label" for="mode">Mode</label>
+      <select id="mode" class="mode-select">
+        <option value="clean">🧼 Clean Mode</option>
+        <option value="word">📄 Word Safe Mode</option>
+        <option value="web">🌐 Web Safe Mode</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label class="field-label" for="input">Paste Arabic text</label>
+      <textarea
+        id="input"
+        class="textarea"
+        placeholder="الصق النص العربي هنا..."
+        rows="6"
+        dir="auto"
+        spellcheck="false"
+      ></textarea>
+    </div>
+
+    <div class="actions">
+      <button id="fix-btn" class="btn btn-primary">Fix Arabic</button>
+      <button id="clear-btn" class="btn btn-ghost">Clear</button>
+    </div>
+
+    <div class="field" id="output-field" style="display:none;">
+      <label class="field-label" for="output">Fixed text</label>
+      <textarea
+        id="output"
+        class="textarea textarea-output"
+        rows="6"
+        dir="rtl"
+        readonly
+        spellcheck="false"
+      ></textarea>
+      <button id="copy-btn" class="btn btn-copy">
+        <span id="copy-label">Copy Output</span>
+      </button>
+    </div>
+
+    <div id="toast" class="toast" aria-live="polite"></div>
+  </div>
+
+  <script src="fixer.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
