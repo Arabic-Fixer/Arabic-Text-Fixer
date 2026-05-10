@@ -1,35 +1,86 @@
-# Arabic-Text-Fixer
-Fix messy Arabic text in one click — Chrome Extension. Arabic text breaks when copied into Reddit, Word, or Google Docs due to Unicode direction issues (BiDi).
+# Arabic Text Fixer
 
-Tired of pasting Arabic text (from AI) into Word or Google Docs and seeing it scrambled,
-left-to-right, or with punctuation flying to the wrong side?
+A lightweight Chrome extension that fixes Arabic text direction (RTL/LTR) issues caused by Unicode BiDi rendering when copying text from ChatGPT, PDFs, or websites into apps like Reddit, Microsoft Word, Google Docs, and Notion.
 
-**Arabic Fixer** cleans up Arabic text copied from ChatGPT, websites, PDFs,
-and mixed-language documents — and pastes it correctly into any app.
+---
 
-## What it fixes
-✅ Broken right-to-left (RTL) direction in Word, Google Docs, Notion
-✅ Wrong punctuation — converts `?` → `؟` and `,` → `،`
-✅ Extra spaces, repeated punctuation, invisible formatting characters
-✅ Mixed Arabic + English text that reorders incorrectly
-✅ Messy copy-paste from ChatGPT, PDFs, and web pages
-## What it does NOT do
-❌ Does NOT rewrite text
-❌ Does NOT fix grammar
-❌ Does NOT change meaning
+## 🧠 Problem
 
-## Three modes
-- 🧼 **Clean Mode** — removes invisible characters, fixes spacing and punctuation (before posting on any socisl media or AI)
-- 📄 **Word Safe Mode** — adds RTL HTML formatting so Word renders Arabic correctly (before pasting to Word/ Google Docs)
-- 🌐 **Web Safe Mode** — adds Unicode direction marks for browsers and Notion
+Arabic text often breaks when pasted into web editors due to mixed direction (RTL/LTR) handling.
 
-## How to install (Developer Mode)
-1. Download or clone this repo
-2. Go to `chrome://extensions`
-3. Enable **Developer mode** (top right toggle)
-4. Click **Load unpacked** → select this folder
-5. The extension is now active in your browser
+Common issues:
+- Text appears left-to-right instead of right-to-left  
+- Punctuation flips direction (؟ ، .)  
+- Mixed Arabic + English becomes visually disordered  
+- Cursor behaves unpredictably while editing  
+- Copy-paste from AI tools or PDFs becomes messy  
 
-## Privacy
-100% private. No servers. No accounts. Everything runs locally in your browser.
-Your text is never sent anywhere.
+---
+
+## ⚙️ Solution
+
+Arabic Text Fixer processes text before it is rendered in editable fields by:
+
+- Removing problematic Unicode BiDi control characters  
+- Normalizing text direction (RTL/LTR consistency)  
+- Fixing punctuation display issues  
+- Stabilizing mixed Arabic + English text  
+
+---
+
+## ✨ Features
+
+- Fixes Arabic RTL rendering issues  
+- Supports mixed Arabic + English text  
+- Works in Reddit, Word, Google Docs, Notion  
+- Lightweight and fast  
+- No internet required  
+
+---
+
+## ❌ What It Does NOT Do
+
+- Does NOT rewrite text  
+- Does NOT translate  
+- Does NOT fix grammar  
+- Does NOT change meaning  
+
+---
+
+## 🧩 How It Works
+
+The extension intercepts pasted text in the browser before it is inserted into editable fields. It then cleans Unicode direction markers and ensures consistent rendering across web applications.
+
+---
+
+## 🚀 Installation (Developer Mode)
+
+1. Download or clone this repository  
+2. Open Chrome → `chrome://extensions/`  
+3. Enable **Developer mode**  
+4. Click **Load unpacked**  
+5. Select the project folder  
+
+---
+
+## 🔐 Privacy
+
+- No data is collected  
+- No text is sent anywhere  
+- No tracking or analytics  
+- Everything runs locally in your browser  
+
+---
+
+## 💡 Use Cases
+
+- Posting Arabic content on Reddit  
+- Pasting ChatGPT responses into Word or Google Docs  
+- Editing bilingual (Arabic + English) documents  
+- Fixing messy text from PDFs and websites  
+
+---
+
+## 📌 License
+
+MIT License
