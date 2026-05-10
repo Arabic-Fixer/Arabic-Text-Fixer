@@ -13,8 +13,7 @@ and mixed-language documents — and pastes it correctly into any app.
 ✅ Extra spaces, repeated punctuation, invisible formatting characters
 ✅ Mixed Arabic + English text that reorders incorrectly
 ✅ Messy copy-paste from ChatGPT, PDFs, and web pages
-
-❌ What it does NOT do
+## What it does NOT do
 ❌ Does NOT rewrite text
 ❌ Does NOT fix grammar
 ❌ Does NOT change meaning
